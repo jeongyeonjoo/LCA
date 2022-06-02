@@ -193,9 +193,9 @@ def calc_digit_t_n(time_w_n, n_state):
     ### digitize time for negative area
     if n_state != 0:
         # n_state = 2**bit
-        bin_n = np.linspace(w_max, 0, n_state)                     #여기까지 맞음_200717 확인     bin_n = np.linspace(1, 0, n_state) 
-        calc_time_n = np.digitize(time_w_n, bin_n) + (n_state) #여기까지 맞음_200717 확인
-        calc_time_n = (((2*n_state)-1) - calc_time_n) / (n_state-1) #여기까지 맞음_200717 확인
+        bin_n = np.linspace(w_max, 0, n_state)
+        calc_time_n = np.digitize(time_w_n, bin_n) + (n_state) 
+        calc_time_n = (((2*n_state)-1) - calc_time_n) / (n_state-1)
         return calc_time_n
 
     else:
